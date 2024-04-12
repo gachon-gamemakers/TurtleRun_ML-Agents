@@ -26,6 +26,11 @@ public class TrackCheckpoints2 : MonoBehaviour
         nextCheckpointSingleIndex = 0;
     }
 
+    public int GetCheckPointIndex(Transform checkpointsTransform)
+    {
+        return checkpointSingleList.IndexOf(checkpointsTransform);
+    }
+
     public bool PlayerThroughCheckpoint(Transform checkPointSingle)
     {
         if(checkpointSingleList.IndexOf(checkPointSingle)== nextCheckpointSingleIndex)

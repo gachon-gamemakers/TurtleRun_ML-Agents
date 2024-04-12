@@ -12,9 +12,10 @@ namespace Gamandol.Race
     {
         TopDownCarController2 topDownCarController;
         Vector3 firstPosition;
-        Quaternion firstQuaternion;
+        public Quaternion firstQuaternion;
         Rigidbody2D carRigidbody2D;
-        int pointCount = 0;
+        public int nextCheckPoint = 0;
+        int checkPointMax = 0;
 
         void Awake()
         {
@@ -24,10 +25,15 @@ namespace Gamandol.Race
             carRigidbody2D = GetComponent<Rigidbody2D>();
         }
 
+        private void Start()
+        {
+            checkPointMax = TrackCheckpoints2.instance.checkpointSingleList.Count - 1;
+        }
+
         public override void OnEpisodeBegin()
         {
             transform.localPosition = firstPosition;
-            transform.localRotation = firstQuaternion;
+            carRigidbody2D.SetRotation(Quaternion.Euler(0, 0, 0));
             carRigidbody2D.velocity = Vector3.zero;
         }
 
@@ -79,8 +85,12 @@ namespace Gamandol.Race
 
         public override void CollectObservations(VectorSensor sensor)
         {
-            sensor.AddObservation(carRigidbody2D.velocity.x);
-            sensor.AddObservation(carRigidbody2D.velocity.y);
+
+            Vector2 forwardVelocity = transform.up * Vector2.Dot(carRigidbody2D.velocity, transform.up);
+            Vector2 rightVelocity = transform.right * Vector2.Dot(carRigidbody2D.velocity, transform.right);
+
+            sensor.AddObservation(forwardVelocity);
+            sensor.AddObservation(rightVelocity);
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -88,13 +98,13 @@ namespace Gamandol.Race
             Debug.Log("triger");
             if (collision.tag == "CheckPoint") 
             {
-                if (TrackCheckpoints2.instance.PlayerThroughCheckpoint(collision.transform))
+                if (TrackCheckpoints2.instance.GetCheckPointIndex(collision.transform) == nextCheckPoint)
                 {
                     AddReward(1f);
-                    pointCount++;
-                    if(pointCount >= 20) 
-                    { 
-                        pointCount = 0;
+                    nextCheckPoint++;
+                    if(nextCheckPoint >= checkPointMax) 
+                    {
+                        nextCheckPoint = 0;
                         EndEpisode();
                     }
                 }
