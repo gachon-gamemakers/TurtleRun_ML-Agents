@@ -6,7 +6,7 @@ using Gamandol.Race;
 namespace Gamandol.Race
 {
 
-    public class TrackCheckPoints2 : MonoBehaviour 
+    public class TrackCheckPoints : MonoBehaviour 
     { 
     public List<CheckPointSingle> checkpointSingleList;
     public int nextCheckpointSingleIndex;

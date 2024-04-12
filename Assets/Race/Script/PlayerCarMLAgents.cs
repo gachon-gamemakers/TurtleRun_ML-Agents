@@ -10,7 +10,7 @@ namespace Gamandol.Race
 {
     public class PlayerCarMLAgents : Agent
     {
-        [SerializeField] private TrackCheckPoints2 trackCheckpoints;
+        [SerializeField] private TrackCheckPoints trackCheckpoints;
         private TopDownCarController topDownCarController;
         Rigidbody2D carRigidbody2D;
 
