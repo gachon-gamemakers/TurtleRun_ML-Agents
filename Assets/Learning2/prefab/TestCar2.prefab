@@ -203,7 +203,7 @@ MonoBehaviour:
   m_RayLength: 20
   m_RayLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967232
+    m_Bits: 4294967104
   m_ObservationStacks: 1
   rayHitColor: {r: 0, g: 1, b: 0.04313922, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
@@ -10056,6 +10056,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e51e09f5b5beb8c41939ed28cd250fb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &6453443493296583507
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 713188162693298465}
+  - component: {fileID: 6274324674580690326}
+  m_Layer: 3
+  m_Name: TrackSensor (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &713188162693298465
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6453443493296583507}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1289033774807101827}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6274324674580690326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6453443493296583507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f67c7e722ba14acd9153bb4488bff6e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SensorName: RayPerceptionSensor2
+  m_DetectableTags:
+  - Wall
+  - CheckPoint
+  m_RaysPerDirection: 3
+  m_MaxRayDegrees: 70
+  m_SphereCastRadius: 0.5
+  m_RayLength: 20
+  m_RayLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967168
+  m_ObservationStacks: 1
+  rayHitColor: {r: 1, g: 0.14192973, b: 0, a: 1}
+  rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &7750209502899204194
 GameObject:
   m_ObjectHideFlags: 0
@@ -10093,6 +10151,7 @@ Transform:
   - {fileID: 3009860908936966041}
   - {fileID: 9110724677158336671}
   - {fileID: 9116498758856943379}
+  - {fileID: 713188162693298465}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10153,7 +10212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 2
+    VectorObservationSize: 1
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
@@ -10196,10 +10255,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 659cd292ce9b8c14a8ffaec611536435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
   driftFactor: 0.95
-  accelerationFactor: 4
+  accelerationFactor: 6
   turnFactor: 3.5
-  maxSpeed: 40
+  maxSpeed: 50
   spurt: 50
   Mass: 1
 --- !u!70 &9056281768514216711

@@ -5,6 +5,7 @@ using Unity.MLAgents.Actuators;
 using Unity.MLAgents.Sensors;
 using UnityEngine;
 using UnityEngine.UIElements;
+using Sirenix.OdinInspector;
 
 namespace Gamandol.Race
 {
@@ -12,31 +13,35 @@ namespace Gamandol.Race
     {
         TopDownCarController2 topDownCarController;
         Vector3 firstPosition;
-        public Quaternion firstQuaternion;
         Rigidbody2D carRigidbody2D;
         public int nextCheckPoint = 0;
         int checkPointMax = 0;
+        List<Transform> checkPointList;
+        Vector2 nextPointDirection, nextPointDirection2;
+        int directionPoint = -1;
+
 
         void Awake()
         {
             topDownCarController = GetComponent<TopDownCarController2>();
             firstPosition = transform.localPosition;
-            firstQuaternion = transform.localRotation;
             carRigidbody2D = GetComponent<Rigidbody2D>();
         }
 
         private void Start()
         {
             checkPointMax = TrackCheckpoints2.instance.checkpointSingleList.Count - 1;
+            checkPointList = TrackCheckpoints2.instance.checkpointSingleList;
         }
 
         public override void OnEpisodeBegin()
         {
             transform.localPosition = firstPosition;
-            carRigidbody2D.SetRotation(Quaternion.Euler(0, 0, 0));
-            carRigidbody2D.velocity = Vector3.zero;
+            topDownCarController.CarReset();
+            nextCheckPoint = 0;
         }
 
+        
         public override void OnActionReceived(ActionBuffers actions)
         {
             AddReward(-0.002f);
@@ -65,9 +70,6 @@ namespace Gamandol.Race
         {
             var discreteAction = actionsOut.DiscreteActions;
 
-            Debug.Log("ver : " + (int)Input.GetAxisRaw("Vertical"));
-            Debug.Log("hori : " + (int)Input.GetAxisRaw("Horizontal"));
-
             switch ((int)Input.GetAxisRaw("Vertical"))
             {
                 case 0: discreteAction[0] = 0; break;
@@ -85,12 +87,27 @@ namespace Gamandol.Race
 
         public override void CollectObservations(VectorSensor sensor)
         {
-
+            /*
             Vector2 forwardVelocity = transform.up * Vector2.Dot(carRigidbody2D.velocity, transform.up);
             Vector2 rightVelocity = transform.right * Vector2.Dot(carRigidbody2D.velocity, transform.right);
 
+            Debug.Log(forwardVelocity);
+            Debug.Log(rightVelocity);
+
             sensor.AddObservation(forwardVelocity);
             sensor.AddObservation(rightVelocity);
+            */
+            if(directionPoint != nextCheckPoint)
+            {
+                nextPointDirection = checkPointList[nextCheckPoint].transform.forward;
+                int doubleNextCeechPoint = nextCheckPoint + 1 >= checkPointList.Count ? 0 : nextCheckPoint + 1;
+                nextPointDirection2 = checkPointList[doubleNextCeechPoint].transform.forward;
+
+                directionPoint = nextCheckPoint;
+            }
+            
+            sensor.AddObservation(Vector2.Dot(transform.forward, nextPointDirection));
+            //sensor.AddObservation(Vector2.Dot(transform.forward, nextPointDirection2));
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -100,6 +117,7 @@ namespace Gamandol.Race
             {
                 if (TrackCheckpoints2.instance.GetCheckPointIndex(collision.transform) == nextCheckPoint)
                 {
+                    Debug.Log("+1");
                     AddReward(1f);
                     nextCheckPoint++;
                     if(nextCheckPoint >= checkPointMax) 
@@ -110,6 +128,7 @@ namespace Gamandol.Race
                 }
                 else
                 {
+                    Debug.Log("-1");
                     AddReward(-1f);
                 }
             }

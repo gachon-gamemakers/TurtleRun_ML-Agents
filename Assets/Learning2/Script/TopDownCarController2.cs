@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,7 +6,7 @@ using UnityEngine;
 
 namespace Gamandol.Race
 {
-    public class TopDownCarController2 : MonoBehaviour
+    public class TopDownCarController2 : SerializedMonoBehaviour
     {
         // 차 설정
         [Header("Car settings")]
@@ -49,6 +50,15 @@ namespace Gamandol.Race
             KillOrthogonalvelocity();
 
             ApplySteering();
+        }
+
+        [Button]
+        public void CarReset()
+        {
+            rotationAngle = 0; // 회전 각도
+
+            carRigidbody2D.SetRotation(rotationAngle);
+            carRigidbody2D.velocity = Vector3.zero;
         }
 
         void ReturnNormalSpeed()
