@@ -1,20 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Gamandol.Race;
 
-public class CheckPointSingle : MonoBehaviour
+namespace Gamandol.Race
 {
-    private TrackCheckpoints trackCheckpoints;
-    private void OnTriggerEnter2D(Collider2D collision)
+    public class CheckPointSingle : MonoBehaviour
     {
-        if (collision.tag =="Player")
+        private TrackCheckPoints2 trackCheckpoints;
+        private void OnTriggerEnter2D(Collider2D collision)
         {
-            trackCheckpoints.PlayerThroughCheckpoint(this);
+            if (collision.tag == "Player")
+            {
+                trackCheckpoints.PlayerThroughCheckpoint(this);
+            }
         }
-    }
 
-    public void SetTrackCheckpoints(TrackCheckpoints trackCheckpoints)
-    {
-        this.trackCheckpoints = trackCheckpoints;
+        public void SetTrackCheckpoints(TrackCheckPoints2 trackCheckpoints)
+        {
+            this.trackCheckpoints = trackCheckpoints;
+        }
     }
 }

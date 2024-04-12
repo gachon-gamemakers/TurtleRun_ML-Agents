@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Gamandol.Race;
 
 namespace Gamandol.Race
 {
@@ -18,10 +18,11 @@ namespace Gamandol.Race
 
         // 지역변수
         float maxSpeedValue = 0; // 최고속력값 저장변수
+        public float accelerationFactorValue = 0; // 초기엑셀값 저장변수
         float accelerationInput = 0; // 앞으로가는 힘의값
         float steeringInput = 0; // 좌우방향값
 
-        float rotationAngle = 0; // 회전 각도
+        public float rotationAngle = 0; // 회전 각도
 
         float velocityVsUp = 0;
 
@@ -37,6 +38,12 @@ namespace Gamandol.Race
         {
             carRigidbody2D.mass = Mass; // 무게대입
             maxSpeedValue = maxSpeed; // 최고속력값 저장
+            accelerationFactorValue = accelerationFactor; // 초기액셀값 저장
+            StartSput();
+        }
+
+        public void StartSput()
+        {
             maxSpeed = 99999; // 최고속도 제한해제
             accelerationFactor += spurt; // 초반 가속힘 스퍼트만큼 추가
             Invoke("ReturnNormalSpeed", 0.5f); // 0.5초후 원래속도로 초기화 
@@ -54,7 +61,7 @@ namespace Gamandol.Race
         void ReturnNormalSpeed()
         {
             maxSpeed = maxSpeedValue;
-            accelerationFactor -= spurt;
+            accelerationFactor = accelerationFactorValue;
         }
 
         void ApplyEngineForce()
@@ -95,7 +102,7 @@ namespace Gamandol.Race
             // 회전 각도
             rotationAngle -= steeringInput * turnFactor * minSpeedBeforeAllowTurningFactor;
 
-            // 자동차의 
+            // 자동차의 회전
             carRigidbody2D.MoveRotation(rotationAngle);
         }
 
@@ -126,7 +133,7 @@ namespace Gamandol.Race
             }
 
             //커브를 크게 돌면 자국이 남음
-            if (Mathf.Abs(GetLateralVelocity()) > 4.0f)
+            if (Mathf.Abs(GetLateralVelocity()) > 1.0f)
                 return true;
 
             return false;
