@@ -7,7 +7,7 @@ namespace Gamandol.Race
 {
     public class CheckPointSingle : MonoBehaviour
     {
-        private TrackCheckpoints trackCheckpoints;
+        private TrackCheckPoints2 trackCheckpoints;
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.tag == "Player")
@@ -16,7 +16,7 @@ namespace Gamandol.Race
             }
         }
 
-        public void SetTrackCheckpoints(TrackCheckpoints trackCheckpoints)
+        public void SetTrackCheckpoints(TrackCheckPoints2 trackCheckpoints)
         {
             this.trackCheckpoints = trackCheckpoints;
         }
