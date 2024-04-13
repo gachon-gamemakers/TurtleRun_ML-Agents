@@ -1,0 +1,38 @@
+{
+    "Car": {
+        "checkpoints": [
+            {
+                "steps": 499957,
+                "file_path": "results\\CarDriving67\\Car\\Car-499957.onnx",
+                "reward": 3.4915404749604373,
+                "creation_time": 1713015228.8184507,
+                "auxillary_file_paths": [
+                    "results\\CarDriving67\\Car\\Car-499957.pt"
+                ]
+            },
+            {
+                "steps": 500085,
+                "file_path": "results\\CarDriving67\\Car\\Car-500085.onnx",
+                "reward": 3.4915404749604373,
+                "creation_time": 1713015228.893451,
+                "auxillary_file_paths": [
+                    "results\\CarDriving67\\Car\\Car-500085.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 500085,
+            "file_path": "results\\CarDriving67\\Car.onnx",
+            "reward": 3.4915404749604373,
+            "creation_time": 1713015228.893451,
+            "auxillary_file_paths": [
+                "results\\CarDriving67\\Car\\Car-500085.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.2.2+cpu"
+    }
+}

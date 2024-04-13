@@ -1,0 +1,42 @@
+{
+    "name": "root",
+    "metadata": {
+        "timer_format_version": "0.1.0",
+        "start_time_seconds": "1713021833",
+        "python_version": "3.9.11 (main, Mar 30 2022, 02:45:55) [MSC v.1916 64 bit (AMD64)]",
+        "command_line_arguments": "C:\\Users\\User\\miniconda3\\envs\\mlagents\\Scripts\\mlagents-learn Car.yaml --run-id=CarDriving79",
+        "mlagents_version": "0.30.0",
+        "mlagents_envs_version": "0.30.0",
+        "communication_protocol_version": "1.5.0",
+        "pytorch_version": "2.2.2+cpu",
+        "numpy_version": "1.21.2",
+        "end_time_seconds": "1713021894"
+    },
+    "total": 61.5722078,
+    "count": 1,
+    "self": 0.007153500000001145,
+    "children": {
+        "run_training.setup": {
+            "total": 0.061352400000000085,
+            "count": 1,
+            "self": 0.061352400000000085
+        },
+        "TrainerController.start_learning": {
+            "total": 61.5037019,
+            "count": 1,
+            "self": 8.020000000641403e-05,
+            "children": {
+                "TrainerController._reset_env": {
+                    "total": 61.5036032,
+                    "count": 1,
+                    "self": 61.5036032
+                },
+                "TrainerController._save_models": {
+                    "total": 1.8499999995924554e-05,
+                    "count": 1,
+                    "self": 1.8499999995924554e-05
+                }
+            }
+        }
+    }
+}

@@ -6,6 +6,7 @@ using Unity.MLAgents.Sensors;
 using UnityEngine;
 using UnityEngine.UIElements;
 using Sirenix.OdinInspector;
+using System.Threading;
 
 namespace Gamandol.Race
 {
@@ -20,6 +21,9 @@ namespace Gamandol.Race
         Vector2 nextPointDirection, nextPointDirection2;
         int directionPoint = -1;
 
+        int collisionCount = 0;
+        int invalidPointCount = 0;
+        int timeCount = 0;
 
         void Awake()
         {
@@ -45,6 +49,7 @@ namespace Gamandol.Race
         public override void OnActionReceived(ActionBuffers actions)
         {
             AddReward(-0.002f);
+            timeCount++;
 
             float forwardAmount = 0f;
             float turnAmount = 0f;
@@ -99,27 +104,34 @@ namespace Gamandol.Race
             */
             if(directionPoint != nextCheckPoint)
             {
-                nextPointDirection = checkPointList[nextCheckPoint].transform.forward;
+                nextPointDirection = checkPointList[nextCheckPoint].transform.up;
                 int doubleNextCeechPoint = nextCheckPoint + 1 >= checkPointList.Count ? 0 : nextCheckPoint + 1;
-                nextPointDirection2 = checkPointList[doubleNextCeechPoint].transform.forward;
+                nextPointDirection2 = checkPointList[doubleNextCeechPoint].transform.up;
 
                 directionPoint = nextCheckPoint;
             }
-            
-            sensor.AddObservation(Vector2.Dot(transform.forward, nextPointDirection));
+
+            //Debug.Log("a: " + Vector2.Dot(transform.up, nextPointDirection));
+            sensor.AddObservation(Vector2.Dot(transform.up, nextPointDirection));
+            sensor.AddObservation(carRigidbody2D.velocity.magnitude);
             //sensor.AddObservation(Vector2.Dot(transform.forward, nextPointDirection2));
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            Debug.Log("triger");
             if (collision.tag == "CheckPoint") 
             {
                 if (TrackCheckpoints2.instance.GetCheckPointIndex(collision.transform) == nextCheckPoint)
                 {
-                    Debug.Log("+1");
+                    //Debug.Log("+1 + " + (10f / timeCount));
+
                     AddReward(1f);
+
+                    //collisionCount = 0;
+                    invalidPointCount = 0;
+                    timeCount = 0;
                     nextCheckPoint++;
+
                     if(nextCheckPoint >= checkPointMax) 
                     {
                         nextCheckPoint = 0;
@@ -128,10 +140,50 @@ namespace Gamandol.Race
                 }
                 else
                 {
-                    Debug.Log("-1");
-                    AddReward(-1f);
+/*                    Debug.Log("-1");
+                    AddReward(-1f);*/
+                    //Debug.Log("dot: " + Vector2.Dot(transform.forward, checkPointList[nextCheckPoint].transform.forward));
+                    if (Vector2.Dot(transform.forward, nextPointDirection) < 0)
+                    {
+                        Debug.Log("back");
+                        AddReward(-10f);
+                        EndEpisode();
+                    }
+                    else
+                    {
+                        Debug.Log("-1");
+                        AddReward(-1f);
+                    }
                 }
             }
+        }
+
+
+/*        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            AddReward(-0.3f);
+        }*/
+
+        private void OnCollisionStay2D(Collision2D collision)
+        {
+            if (collision.collider.tag == "Wall")
+            {
+                collisionCount++;
+                if (collisionCount >= 60)
+                {
+                    Debug.Log("-10");
+                    AddReward(-10f);
+                    collisionCount = 0;
+                    EndEpisode();
+                }
+            }
+            //AddReward(-0.05f);
+            
+        }
+
+        private void OnCollisionExit2D(Collision2D collision)
+        {
+            collisionCount = 0;
         }
     }
 }

@@ -197,8 +197,8 @@ MonoBehaviour:
   m_DetectableTags:
   - Wall
   - CheckPoint
-  m_RaysPerDirection: 3
-  m_MaxRayDegrees: 70
+  m_RaysPerDirection: 4
+  m_MaxRayDegrees: 90
   m_SphereCastRadius: 0.5
   m_RayLength: 20
   m_RayLayerMask:
@@ -10087,7 +10087,7 @@ Transform:
   m_GameObject: {fileID: 7750209502899204194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.01, y: -8, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 0.4, y: 0.6, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3009860908936966041}
@@ -10153,7 +10153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 1
+    VectorObservationSize: 2
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
@@ -10209,7 +10209,7 @@ MonoBehaviour:
   accelerationFactor: 3
   turnFactor: 3.5
   maxSpeed: 15
-  spurt: 15
+  spurt: 3
   Mass: 1
 --- !u!70 &9056281768514216711
 CapsuleCollider2D:
@@ -10244,7 +10244,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
+  m_Size: {x: 0.6, y: 0.9}
   m_Direction: 0
 --- !u!1 &8495797837426255193
 GameObject:
