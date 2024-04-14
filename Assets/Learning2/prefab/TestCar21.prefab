@@ -197,8 +197,8 @@ MonoBehaviour:
   m_DetectableTags:
   - Wall
   - CheckPoint
-  m_RaysPerDirection: 4
-  m_MaxRayDegrees: 90
+  m_RaysPerDirection: 3
+  m_MaxRayDegrees: 70
   m_SphereCastRadius: 0.5
   m_RayLength: 20
   m_RayLayerMask:
@@ -10206,10 +10206,10 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   driftFactor: 0.95
-  accelerationFactor: 3
+  accelerationFactor: 2
   turnFactor: 3.5
-  maxSpeed: 15
-  spurt: 3
+  maxSpeed: 10
+  spurt: 1
   Mass: 1
 --- !u!70 &9056281768514216711
 CapsuleCollider2D:
@@ -10220,7 +10220,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 7750209502899204194}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8ba07f3fa84306f4ea8bd8911df4b974, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

@@ -21,9 +21,11 @@ namespace Gamandol.Race
         Vector2 nextPointDirection, nextPointDirection2;
         int directionPoint = -1;
 
+        int collisionTimeCount = 0;
         int collisionCount = 0;
         int invalidPointCount = 0;
         int timeCount = 0;
+        int actionCount = 0;
 
         void Awake()
         {
@@ -50,6 +52,21 @@ namespace Gamandol.Race
         {
             AddReward(-0.002f);
             timeCount++;
+            actionCount++;
+
+            if(actionCount == 100) 
+            {
+                actionCount = 0;
+                AddReward((Vector2.Dot(transform.up, nextPointDirection) - 0.9f) * 10);
+                //AddReward(carRigidbody2D.velocity.magnitude * 0.2f);
+            }
+
+/*            if (timeCount > 200)
+            {
+                AddReward(-10f);
+                timeCount = 0;
+                EndEpisode();
+            }*/
 
             float forwardAmount = 0f;
             float turnAmount = 0f;
@@ -113,8 +130,8 @@ namespace Gamandol.Race
 
             //Debug.Log("a: " + Vector2.Dot(transform.up, nextPointDirection));
             sensor.AddObservation(Vector2.Dot(transform.up, nextPointDirection));
+            sensor.AddObservation(Vector2.Dot(transform.up, nextPointDirection2));
             sensor.AddObservation(carRigidbody2D.velocity.magnitude);
-            //sensor.AddObservation(Vector2.Dot(transform.forward, nextPointDirection2));
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
@@ -123,11 +140,11 @@ namespace Gamandol.Race
             {
                 if (TrackCheckpoints2.instance.GetCheckPointIndex(collision.transform) == nextCheckPoint)
                 {
-                    //Debug.Log("+1 + " + (10f / timeCount));
+                    Debug.Log("a: " + Vector2.Dot(transform.up, nextPointDirection));
 
                     AddReward(1f);
 
-                    //collisionCount = 0;
+                    collisionTimeCount = 0;
                     invalidPointCount = 0;
                     timeCount = 0;
                     nextCheckPoint++;
@@ -140,10 +157,7 @@ namespace Gamandol.Race
                 }
                 else
                 {
-/*                    Debug.Log("-1");
-                    AddReward(-1f);*/
-                    //Debug.Log("dot: " + Vector2.Dot(transform.forward, checkPointList[nextCheckPoint].transform.forward));
-                    if (Vector2.Dot(transform.forward, nextPointDirection) < 0)
+                    if (Vector2.Dot(transform.up, nextPointDirection) < 0)
                     {
                         Debug.Log("back");
                         AddReward(-10f);
@@ -159,31 +173,25 @@ namespace Gamandol.Race
         }
 
 
-/*        private void OnCollisionEnter2D(Collision2D collision)
+        private void OnCollisionEnter2D(Collision2D collision)
         {
-            AddReward(-0.3f);
-        }*/
-
+            if (collision.collider.tag == "Wall")
+            {
+                AddReward(-1f);
+            }
+        }
+/*
         private void OnCollisionStay2D(Collision2D collision)
         {
             if (collision.collider.tag == "Wall")
             {
-                collisionCount++;
-                if (collisionCount >= 60)
-                {
-                    Debug.Log("-10");
-                    AddReward(-10f);
-                    collisionCount = 0;
-                    EndEpisode();
-                }
+                AddReward(-0.005f);
             }
-            //AddReward(-0.05f);
-            
-        }
+        }*/
 
-        private void OnCollisionExit2D(Collision2D collision)
-        {
-            collisionCount = 0;
-        }
+        /*        private void OnCollisionExit2D(Collision2D collision)
+                {
+                    collisionCount = 0;
+                }*/
     }
 }
