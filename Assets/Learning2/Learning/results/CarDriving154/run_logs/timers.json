@@ -1,0 +1,89 @@
+{
+    "name": "root",
+    "gauges": {
+        "Car.Policy.Entropy.mean": {
+            "value": 2.1969010829925537,
+            "min": 2.196755886077881,
+            "max": 2.196927070617676,
+            "count": 4
+        },
+        "Car.Policy.Entropy.sum": {
+            "value": 21793.259765625,
+            "min": 21793.259765625,
+            "max": 24604.7265625,
+            "count": 4
+        },
+        "Car.Step.mean": {
+            "value": 39956.0,
+            "min": 9960.0,
+            "max": 39956.0,
+            "count": 4
+        },
+        "Car.Step.sum": {
+            "value": 39956.0,
+            "min": 9960.0,
+            "max": 39956.0,
+            "count": 4
+        },
+        "Car.Policy.ExtrinsicValueEstimate.mean": {
+            "value": 0.03153838962316513,
+            "min": 0.027020307257771492,
+            "max": 0.057919424027204514,
+            "count": 4
+        },
+        "Car.Policy.ExtrinsicValueEstimate.sum": {
+            "value": 5.266911029815674,
+            "min": 4.296228885650635,
+            "max": 10.077980041503906,
+            "count": 4
+        },
+        "Car.Environment.EpisodeLength.mean": {
+            "value": 471.57894736842104,
+            "min": 135.0,
+            "max": 549.9354838709677,
+            "count": 4
+        },
+        "Car.Environment.EpisodeLength.sum": {
+            "value": 8960.0,
+            "min": 675.0,
+            "max": 17048.0,
+            "count": 4
+        },
+        "Car.Environment.CumulativeReward.mean": {
+            "value": -88.23566718948514,
+            "min": -98.12227176177886,
+            "max": -52.66109037399292,
+            "count": 4
+        },
+        "Car.Environment.CumulativeReward.sum": {
+            "value": -1676.4776766002178,
+            "min": -3041.7904246151447,
+            "max": -263.3054518699646,
+            "count": 4
+        },
+        "Car.Policy.ExtrinsicReward.mean": {
+            "value": -88.23566718948514,
+            "min": -98.12227176177886,
+            "max": -52.66109037399292,
+            "count": 4
+        },
+        "Car.Policy.ExtrinsicReward.sum": {
+            "value": -1676.4776766002178,
+            "min": -3041.7904246151447,
+            "max": -263.3054518699646,
+            "count": 4
+        },
+        "Car.IsTraining.mean": {
+            "value": 1.0,
+            "min": 1.0,
+            "max": 1.0,
+            "count": 4
+        },
+        "Car.IsTraining.sum": {
+            "value": 1.0,
+            "min": 1.0,
+            "max": 1.0,
+            "count": 4
+        }
+    },
+    

@@ -10087,7 +10087,7 @@ Transform:
   m_GameObject: {fileID: 7750209502899204194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.01, y: -8, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.7, z: 0.7}
+  m_LocalScale: {x: 0.4, y: 0.6, z: 0.7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3009860908936966041}
@@ -10138,7 +10138,7 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 3000
+  MaxStep: 5000
   nextCheckPoint: 1
 --- !u!114 &6496602995058000325
 MonoBehaviour:
@@ -10153,7 +10153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 1
+    VectorObservationSize: 3
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
@@ -10207,9 +10207,9 @@ MonoBehaviour:
     SerializationNodes: []
   driftFactor: 0.95
   accelerationFactor: 3
-  turnFactor: 3.5
+  turnFactor: 3
   maxSpeed: 15
-  spurt: 15
+  spurt: 1
   Mass: 1
 --- !u!70 &9056281768514216711
 CapsuleCollider2D:
@@ -10220,7 +10220,7 @@ CapsuleCollider2D:
   m_GameObject: {fileID: 7750209502899204194}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8ba07f3fa84306f4ea8bd8911df4b974, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -10244,7 +10244,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.5, y: 1}
+  m_Size: {x: 0.6, y: 0.9}
   m_Direction: 0
 --- !u!1 &8495797837426255193
 GameObject:
