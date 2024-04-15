@@ -12,7 +12,7 @@ namespace Gamandol.Race
         {
             if (collision.tag == "Player")
             {
-                trackCheckpoints.PlayerThroughCheckpoint(this);
+                collision.GetComponent<PlayerCarMLAgents>().PlayerThroughCheckpoint(this);
             }
         }
 
