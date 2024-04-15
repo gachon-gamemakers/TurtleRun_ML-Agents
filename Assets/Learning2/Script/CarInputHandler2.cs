@@ -23,7 +23,7 @@ namespace Gamandol.Race
 
         int collisionTimeCount = 0, collisionCount = 0, invalidPointCount = 0, timeCount = 0, actionCount = 0;
         ContactPoint2D[] contacts;
-                float totalImpulse = 0;
+        float totalImpulse = 0;
 
         void Awake()
         {
@@ -56,8 +56,15 @@ namespace Gamandol.Race
             {
                 actionCount = 0;
                 AddReward((Vector2.Dot(transform.up, nextPointDirection) - 0.9f) * 5);
-                
+
             }
+
+/*            if (actionCount == 50)
+            {
+                actionCount = 0;
+                AddReward((Vector2.Dot(transform.up, nextPointDirection) - 0.9f) * 5);
+
+            }*/
 
             /*            if (timeCount > 200)
                         {
@@ -139,8 +146,9 @@ namespace Gamandol.Race
                 if (TrackCheckpoints2.instance.GetCheckPointIndex(collision.transform) == nextCheckPoint)
                 {
                     AddReward(1f);
-                    AddReward(carRigidbody2D.velocity.magnitude * (Vector2.Dot(carRigidbody2D.velocity.normalized, nextPointDirection) - 0.8f) * 0.2f);
-                    Debug.Log("dd" + carRigidbody2D.velocity.magnitude * (Vector2.Dot(carRigidbody2D.velocity.normalized, nextPointDirection) - 0.8f) * 0.2f);
+                    AddReward(carRigidbody2D.velocity.magnitude * 0.1f);
+                    //AddReward(carRigidbody2D.velocity.magnitude * (Vector2.Dot(carRigidbody2D.velocity.normalized, nextPointDirection) - 0.8f) * 0.5f);
+                    //Debug.Log("dd" + carRigidbody2D.velocity.magnitude * (Vector2.Dot(carRigidbody2D.velocity.normalized, nextPointDirection) - 0.8f) * 0.2f);
 
                     collisionTimeCount = 0;
                     invalidPointCount = 0;
@@ -173,12 +181,11 @@ namespace Gamandol.Race
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            AddReward(-0.5f);
-
             if (collision.collider.tag == "Wall")
             {
                 AddReward(-0.5f);
-                contacts = new ContactPoint2D[collision.contactCount];
+
+/*                contacts = new ContactPoint2D[collision.contactCount];
                 collision.GetContacts(contacts);
                 totalImpulse = 0;
                 foreach (ContactPoint2D contact in contacts)
@@ -190,8 +197,8 @@ namespace Gamandol.Race
                 {
                     AddReward(-totalImpulse * 2);
                     Debug.Log("fast2");
-                    //EndEpisode();
-                }
+                    EndEpisode();
+                }*/
             }
         }
 /*

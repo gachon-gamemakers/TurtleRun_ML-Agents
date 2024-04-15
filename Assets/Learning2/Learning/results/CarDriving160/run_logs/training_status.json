@@ -1,0 +1,65 @@
+{
+    "Car": {
+        "checkpoints": [
+            {
+                "steps": 499999,
+                "file_path": "results\\CarDriving160\\Car\\Car-499999.onnx",
+                "reward": 139.6318430350377,
+                "creation_time": 1713180953.0473547,
+                "auxillary_file_paths": [
+                    "results\\CarDriving160\\Car\\Car-499999.pt"
+                ]
+            },
+            {
+                "steps": 999999,
+                "file_path": "results\\CarDriving160\\Car\\Car-999999.onnx",
+                "reward": 179.8933133232978,
+                "creation_time": 1713181299.198716,
+                "auxillary_file_paths": [
+                    "results\\CarDriving160\\Car\\Car-999999.pt"
+                ]
+            },
+            {
+                "steps": 1499969,
+                "file_path": "results\\CarDriving160\\Car\\Car-1499969.onnx",
+                "reward": 182.46982786503244,
+                "creation_time": 1713181649.5273209,
+                "auxillary_file_paths": [
+                    "results\\CarDriving160\\Car\\Car-1499969.pt"
+                ]
+            },
+            {
+                "steps": 1999944,
+                "file_path": "results\\CarDriving160\\Car\\Car-1999944.onnx",
+                "reward": 191.512942641122,
+                "creation_time": 1713182001.3003147,
+                "auxillary_file_paths": [
+                    "results\\CarDriving160\\Car\\Car-1999944.pt"
+                ]
+            },
+            {
+                "steps": 2000008,
+                "file_path": "results\\CarDriving160\\Car\\Car-2000008.onnx",
+                "reward": 191.512942641122,
+                "creation_time": 1713182001.3755176,
+                "auxillary_file_paths": [
+                    "results\\CarDriving160\\Car\\Car-2000008.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 2000008,
+            "file_path": "results\\CarDriving160\\Car.onnx",
+            "reward": 191.512942641122,
+            "creation_time": 1713182001.3755176,
+            "auxillary_file_paths": [
+                "results\\CarDriving160\\Car\\Car-2000008.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.2.2+cpu"
+    }
+}
