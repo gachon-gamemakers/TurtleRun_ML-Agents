@@ -10138,7 +10138,7 @@ MonoBehaviour:
   agentParameters:
     maxStep: 0
   hasUpgradedFromAgentParameters: 1
-  MaxStep: 3000
+  MaxStep: 5000
   nextCheckPoint: 1
 --- !u!114 &6496602995058000325
 MonoBehaviour:
@@ -10153,7 +10153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BrainParameters:
-    VectorObservationSize: 2
+    VectorObservationSize: 3
     NumStackedVectorObservations: 1
     m_ActionSpec:
       m_NumContinuousActions: 0
@@ -10206,9 +10206,9 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   driftFactor: 0.95
-  accelerationFactor: 2
-  turnFactor: 3.5
-  maxSpeed: 10
+  accelerationFactor: 3
+  turnFactor: 3
+  maxSpeed: 15
   spurt: 1
   Mass: 1
 --- !u!70 &9056281768514216711

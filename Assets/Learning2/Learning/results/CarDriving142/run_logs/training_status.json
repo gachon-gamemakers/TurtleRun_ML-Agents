@@ -1,0 +1,29 @@
+{
+    "Car": {
+        "checkpoints": [
+            {
+                "steps": 384,
+                "file_path": "results\\CarDriving142\\Car\\Car-384.onnx",
+                "reward": null,
+                "creation_time": 1713157710.2426898,
+                "auxillary_file_paths": [
+                    "results\\CarDriving142\\Car\\Car-384.pt"
+                ]
+            }
+        ],
+        "final_checkpoint": {
+            "steps": 384,
+            "file_path": "results\\CarDriving142\\Car.onnx",
+            "reward": null,
+            "creation_time": 1713157710.2426898,
+            "auxillary_file_paths": [
+                "results\\CarDriving142\\Car\\Car-384.pt"
+            ]
+        }
+    },
+    "metadata": {
+        "stats_format_version": "0.3.0",
+        "mlagents_version": "0.30.0",
+        "torch_version": "2.2.2+cpu"
+    }
+}

@@ -99,7 +99,7 @@ namespace Gamandol.Race
         void ApplySteering()
         {
             // 천천히 움직일 때 차의 회전 능력을 제한
-            float minSpeedBeforeAllowTurningFactor = (carRigidbody2D.velocity.magnitude / 6);
+            float minSpeedBeforeAllowTurningFactor = (carRigidbody2D.velocity.magnitude * 0.4f);
             minSpeedBeforeAllowTurningFactor = Mathf.Clamp01(minSpeedBeforeAllowTurningFactor);
 
             // 회전 각도
