@@ -83,7 +83,7 @@
       }
     },
     "com.unity.2d.tilemap.extras": {
-      "version": "3.1.0",
+      "version": "3.1.1",
       "depth": 1,
       "source": "registry",
       "dependencies": {
@@ -149,7 +149,7 @@
         "com.unity.2d.sprite": "1.0.0",
         "com.unity.2d.spriteshape": "9.0.2",
         "com.unity.2d.tilemap": "1.0.0",
-        "com.unity.2d.tilemap.extras": "3.1.0",
+        "com.unity.2d.tilemap.extras": "3.1.1",
         "com.unity.2d.aseprite": "1.0.0"
       }
     },
@@ -186,24 +186,15 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ml-agents": {
-      "version": "2.3.0-exp.3",
-      "depth": 1,
+      "version": "2.0.1",
+      "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.barracuda": "3.0.0",
+        "com.unity.barracuda": "2.0.0",
         "com.unity.modules.imageconversion": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
-    },
-    "com.unity.ml-agents.extensions": {
-      "version": "file:C:/Users/nahan/ml-agents/com.unity.ml-agents.extensions",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {
-        "com.unity.ml-agents": "2.3.0-exp.3",
-        "com.unity.modules.physics": "1.0.0"
-      }
     },
     "com.unity.test-framework": {
       "version": "1.1.33",
@@ -226,7 +217,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.timeline": {
-      "version": "1.7.4",
+      "version": "1.7.5",
       "depth": 0,
       "source": "registry",
       "dependencies": {
