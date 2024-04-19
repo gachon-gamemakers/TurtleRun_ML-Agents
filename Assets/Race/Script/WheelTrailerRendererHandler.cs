@@ -6,12 +6,12 @@ namespace Gamandol.Race
 {
     public class WheelTrailerRendererHandler : MonoBehaviour
     {
-        TopDownCarController topDownCarController;
+        TopDownCarController2 topDownCarController;
         TrailRenderer trailRenderer;
 
          void Awake()
         {
-            topDownCarController = GetComponentInParent<TopDownCarController>();
+            topDownCarController = GetComponentInParent<TopDownCarController2>();
 
             trailRenderer = GetComponent<TrailRenderer>();
 

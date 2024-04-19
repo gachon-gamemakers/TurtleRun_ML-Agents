@@ -15,15 +15,12 @@ namespace Gamandol.Race
         TopDownCarController2 topDownCarController;
         Vector3 firstPosition;
         Rigidbody2D carRigidbody2D;
-        public int nextCheckPoint = 0;
-        int checkPointMax = 0;
+        public int nextCheckPoint = 0; // 다음 체크포인트 번호
+        int checkPointMax = 0; // 체크포인트 갯수
         List<Transform> checkPointList;
         Vector2 nextPointDirection, nextPointDirection2;
         int directionPoint = -1;
-
-        int collisionTimeCount = 0, collisionCount = 0, invalidPointCount = 0, timeCount = 0, actionCount = 0;
-        ContactPoint2D[] contacts;
-        float totalImpulse = 0;
+        int actionCount = 0; // 행동 카운트
 
         void Awake()
         {
@@ -34,22 +31,22 @@ namespace Gamandol.Race
 
         private void Start()
         {
-            checkPointMax = TrackCheckpoints2.instance.checkpointSingleList.Count - 1;
-            checkPointList = TrackCheckpoints2.instance.checkpointSingleList;
+            checkPointMax = TrackCheckpoints2.instance.checkpointSingleList.Count - 1; // TrackCheckpoints2에서 체크포인트갯수-1을 가져오고 checkpointmax에 대입 
+            checkPointList = TrackCheckpoints2.instance.checkpointSingleList; // TrackCheckpoint2에서 체크포인트 리스트정보를 checkPointList에 대입
         }
 
         public override void OnEpisodeBegin()
         {
-            transform.localPosition = firstPosition;
-            topDownCarController.CarReset();
-            nextCheckPoint = 0;
+            transform.localPosition = firstPosition; // 위치 처음자리로 초기화
+            topDownCarController.CarSpurt(); // 자동차 스퍼트
+            topDownCarController.CarReset(); // 벡터힘, 회전각 초기화
+            nextCheckPoint = 0; // 체크포인트 초기화
         }
 
         
         public override void OnActionReceived(ActionBuffers actions)
         {
             AddReward(-0.002f);
-            timeCount++;
             actionCount++;
 
             if (actionCount == 50)
@@ -149,10 +146,6 @@ namespace Gamandol.Race
                     AddReward(carRigidbody2D.velocity.magnitude * 0.1f);
                     //AddReward(carRigidbody2D.velocity.magnitude * (Vector2.Dot(carRigidbody2D.velocity.normalized, nextPointDirection) - 0.8f) * 0.5f);
                     //Debug.Log("dd" + carRigidbody2D.velocity.magnitude * (Vector2.Dot(carRigidbody2D.velocity.normalized, nextPointDirection) - 0.8f) * 0.2f);
-
-                    collisionTimeCount = 0;
-                    invalidPointCount = 0;
-                    timeCount = 0;
                     nextCheckPoint++;
 
                     if(nextCheckPoint >= checkPointMax) 

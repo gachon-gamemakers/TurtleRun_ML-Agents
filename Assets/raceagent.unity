@@ -156,7 +156,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &156862720
@@ -183,7 +182,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156862720}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 946ea525a8993574290e08ef3d4444c3, type: 3}
   m_Name: 
@@ -195,6 +194,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 156862720}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -22.931467, y: -29.136784, z: -198.10316}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -204,7 +204,6 @@ Transform:
   - {fileID: 1643103361}
   - {fileID: 417933031}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &195619779
 PrefabInstance:
@@ -543,7 +542,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &248425850 stripped
@@ -579,7 +577,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &254466364
@@ -767,7 +764,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &258044956 stripped
@@ -803,7 +799,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &263317177 stripped
@@ -839,7 +834,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &270402814 stripped
@@ -875,7 +869,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &394458805
@@ -1106,13 +1099,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 417933029}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 7.6614666, y: 6.4267845, z: 198.10316}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 156862722}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &517740039
 GameObject:
@@ -1199,13 +1192,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 517740039}
+  serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 22.931467, y: 29.136784, z: 188.10316}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 156862722}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &517740043
 MonoBehaviour:
@@ -1405,7 +1398,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &561856398
@@ -1745,7 +1737,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &624890284
@@ -1933,7 +1924,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &635268035
@@ -2121,7 +2111,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &718994480
@@ -2461,7 +2450,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &749226848 stripped
@@ -2497,7 +2485,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &798769662 stripped
@@ -2533,7 +2520,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &937621595 stripped
@@ -2569,7 +2555,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &948999246
@@ -2749,7 +2734,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &968665953
@@ -3320,7 +3304,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1165578155 stripped
@@ -3356,7 +3339,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1188141244
@@ -3383,13 +3365,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188141244}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 10.46, y: 1.619, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1245629558}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1188141246
 BoxCollider2D:
@@ -3469,7 +3451,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1205547692
@@ -4040,7 +4021,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1406317227 stripped
@@ -4076,7 +4056,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1424043647 stripped
@@ -4795,7 +4774,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1582664362
@@ -4983,7 +4961,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1601590432 stripped
@@ -5407,7 +5384,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1712339734
@@ -5600,7 +5576,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &1822214836 stripped
@@ -5950,7 +5925,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1932753075 stripped
@@ -5986,7 +5960,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1968656712
@@ -6166,7 +6139,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1977575921
@@ -6354,7 +6326,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &2005652291
@@ -6542,7 +6513,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &2062124048
@@ -6882,7 +6852,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &2089346830 stripped
@@ -6918,7 +6887,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &2102717353
@@ -7098,7 +7066,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &2121460502
@@ -7286,7 +7253,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   m_ObservationStacks: 1
-  m_AlternatingRayOrder: 1
   rayHitColor: {r: 1, g: 0.15684961, b: 0, a: 1}
   rayMissColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &4975577729638017557
@@ -7632,7 +7598,7 @@ PrefabInstance:
     - target: {fileID: 8436650877140241356, guid: 9202086ec3525b041953383389f58f3b, type: 3}
       propertyPath: m_Model
       value: 
-      objectReference: {fileID: 5022602860645237092, guid: 5da6a1fb8cab6e842aead325d82f9f93, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 8604342201155534425, guid: 9202086ec3525b041953383389f58f3b, type: 3}
       propertyPath: m_Model
       value: 
@@ -7833,3 +7799,8 @@ PrefabInstance:
       addedObject: {fileID: 1664027309}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9202086ec3525b041953383389f58f3b, type: 3}
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 156862722}

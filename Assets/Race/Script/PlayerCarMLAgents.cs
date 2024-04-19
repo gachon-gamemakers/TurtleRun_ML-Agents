@@ -98,6 +98,7 @@ namespace Gamandol.Race
             discreteActions[1] = turnAction;
         }
 
+
         public override void CollectObservations(VectorSensor sensor)
         {
             Vector3 checkpointForward = TrackCheckPoints.instance.checkpointSingleList[TrackCheckPoints.instance.nextCheckpointSingleIndex].transform.forward;

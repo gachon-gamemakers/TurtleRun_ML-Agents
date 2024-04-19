@@ -36,20 +36,5 @@ namespace Gamandol.Race
             return checkpointSingleList.IndexOf(checkPoint);
         }
 
-        public void PlayerThroughCheckpoint(Transform checkPointSingle)
-        {
-            if (checkpointSingleList.IndexOf(checkPointSingle) == nextCheckpointSingleIndex)
-            {
-                // 올바른 체크포인트
-                Debug.Log("OK");
-                nextCheckpointSingleIndex = (nextCheckpointSingleIndex + 1) % checkpointSingleList.Count; // 한바퀴 돌면 체크포인트 초기화
-                playerCarMLAgents.SetReward(1f); // 올바른 체크포인트 통과시 보상점수 +1
-            }
-            else
-            {
-                Debug.Log("Nope");
-                playerCarMLAgents.SetReward(-1f); // 올바르지 않은 체크포인트 통과시 보상점수 -1
-            }
-        }
     }
 }

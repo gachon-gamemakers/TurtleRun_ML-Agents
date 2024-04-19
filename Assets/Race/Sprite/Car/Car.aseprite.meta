@@ -1,0 +1,1256 @@
+fileFormatVersion: 2
+guid: 40a88aeb0a4bb874985e7d74e558234a
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: Car_Frame_0
+    originalName: 
+    pivot: {x: 0.5, y: -0.071428575}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 38
+      y: 79
+      width: 24
+      height: 28
+    spriteID: 5a9de5d8e3a135742b8b070e7fa05a30
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 38, y: 79}
+  - name: Car_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: -0.071428575}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 38
+      y: 115
+      width: 24
+      height: 28
+    spriteID: 59039f7f01d5be149bc982e93c376c03
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 38, y: 115}
+  - name: Car_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: -0.03448276}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 222
+      width: 24
+      height: 29
+    spriteID: 576e01ba6114a66429b74fc910cdc0eb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 222}
+  - name: Car_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: -0.03448276}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 38
+      y: 4
+      width: 24
+      height: 29
+    spriteID: 6534b447e8e19c74b8211a1ed19dc9a0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 38, y: 4}
+  - name: Car_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: -0.033333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 43
+      width: 16
+      height: 30
+    spriteID: a016780b06e6fce449136481cffa5b82
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 104, y: 43}
+  - name: Car_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: -0.033333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 81
+      width: 16
+      height: 30
+    spriteID: c343094b09f6bc74da44b76a806168a7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 104, y: 81}
+  - name: Car_Frame_6
+    originalName: 
+    pivot: {x: 0.5, y: -0.033333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 119
+      width: 16
+      height: 30
+    spriteID: 649a00b08f122f841aca943a4c2874a7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 104, y: 119}
+  - name: Car_Frame_7
+    originalName: 
+    pivot: {x: 0.5, y: -0.033333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 157
+      width: 16
+      height: 30
+    spriteID: d13a7bc07da82614db7bd433fe7d2e98
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 104, y: 157}
+  - name: Car_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: -0.12}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 38
+      y: 187
+      width: 22
+      height: 25
+    spriteID: 36dc70fd95f83cf49b508d50b49672d9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 38, y: 187}
+  - name: Car_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: -0.12}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 38
+      y: 220
+      width: 22
+      height: 25
+    spriteID: 57f7dd1415eb5c244a3b75384dc3195b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 38, y: 220}
+  - name: Car_Frame_10
+    originalName: 
+    pivot: {x: 0.5, y: -0.12}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 70
+      y: 70
+      width: 22
+      height: 25
+    spriteID: b62989ef89d37e145845b2f3e30c504a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 70, y: 70}
+  - name: Car_Frame_11
+    originalName: 
+    pivot: {x: 0.5, y: -0.12}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 70
+      y: 103
+      width: 22
+      height: 25
+    spriteID: b314f05f2695e4c4f88d469a8418d1ca
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 70, y: 103}
+  - name: Car_Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: -0.17391305}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 174
+      y: 4
+      width: 18
+      height: 23
+    spriteID: 22a2723ef722d714599ac5223d8bafa6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 174, y: 4}
+  - name: Car_Frame_13
+    originalName: 
+    pivot: {x: 0.5, y: -0.17391305}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 174
+      y: 35
+      width: 18
+      height: 23
+    spriteID: e18f2c7354ee7aa4ab256e8ef44d25f2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 174, y: 35}
+  - name: Car_Frame_14
+    originalName: 
+    pivot: {x: 0.5, y: -0.17391305}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 174
+      y: 66
+      width: 18
+      height: 23
+    spriteID: d58267c1a9e997d45b0ef406474112a8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 174, y: 66}
+  - name: Car_Frame_15
+    originalName: 
+    pivot: {x: 0.5, y: -0.17391305}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 174
+      y: 97
+      width: 18
+      height: 23
+    spriteID: b640bc9d6e7b8da4aba4d5bd1a716779
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 174, y: 97}
+  - name: Car_Frame_16
+    originalName: 
+    pivot: {x: 0.5, y: -0.03448276}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 26
+      height: 29
+    spriteID: 8ad466a7688e2884b93a00219cedbd7f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: Car_Frame_17
+    originalName: 
+    pivot: {x: 0.5, y: -0.03448276}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 41
+      width: 26
+      height: 29
+    spriteID: 69f94edddd1838f47a469e4c4e5729e8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 41}
+  - name: Car_Frame_18
+    originalName: 
+    pivot: {x: 0.5, y: -0.03448276}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 78
+      width: 26
+      height: 29
+    spriteID: caf989bb9c2576e4aacb65602f1d8765
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 78}
+  - name: Car_Frame_19
+    originalName: 
+    pivot: {x: 0.5, y: -0.03448276}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 115
+      width: 26
+      height: 29
+    spriteID: d21ba007f6660a544bac70dbe6bbba29
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 115}
+  - name: Car_Frame_20
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 70
+      y: 136
+      width: 16
+      height: 31
+    spriteID: 4e98c3fb238b0dc46b8db510abc40b3d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 70, y: 136}
+  - name: Car_Frame_21
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 70
+      y: 175
+      width: 16
+      height: 31
+    spriteID: b073757ce1e99074e8e757f77831f568
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 70, y: 175}
+  - name: Car_Frame_22
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 70
+      y: 214
+      width: 16
+      height: 31
+    spriteID: 4c7c7633c88d53749a1ef1e7e53baf3b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 70, y: 214}
+  - name: Car_Frame_23
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 4
+      width: 16
+      height: 31
+    spriteID: ea67bd21aaadba947b2e78adca19537a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 104, y: 4}
+  - name: Car_Frame_24
+    originalName: 
+    pivot: {x: 0.5, y: -0.033333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 104
+      y: 195
+      width: 16
+      height: 30
+    spriteID: 16a9e6f2722e1b84d9bc51d9fd34142c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 104, y: 195}
+  - name: Car_Frame_25
+    originalName: 
+    pivot: {x: 0.5, y: -0.033333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 4
+      width: 16
+      height: 30
+    spriteID: f43b38b9bb2903646a617a6f6fab2308
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 128, y: 4}
+  - name: Car_Frame_26
+    originalName: 
+    pivot: {x: 0.5, y: -0.033333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 42
+      width: 16
+      height: 30
+    spriteID: 2b1d515e68eb56842b2b6d80dcbbe1ba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 128, y: 42}
+  - name: Car_Frame_27
+    originalName: 
+    pivot: {x: 0.5, y: -0.033333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 80
+      width: 16
+      height: 30
+    spriteID: da408ad965c4a1347bad52f5718044f0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 128, y: 80}
+  - name: Car_Frame_28
+    originalName: 
+    pivot: {x: 0.5, y: -0.12}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 70
+      y: 4
+      width: 26
+      height: 25
+    spriteID: e6caeb2ddedacf74ca637273e3f18391
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 70, y: 4}
+  - name: Car_Frame_29
+    originalName: 
+    pivot: {x: 0.5, y: -0.12}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 70
+      y: 37
+      width: 26
+      height: 25
+    spriteID: 0cb71d1c0e2676746b476b4691822c7f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 70, y: 37}
+  - name: Car_Frame_30
+    originalName: 
+    pivot: {x: 0.5, y: -0.037037037}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 152
+      width: 26
+      height: 27
+    spriteID: f5d8e61c7b3555641a8bdbfcd5aeaff8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 152}
+  - name: Car_Frame_31
+    originalName: 
+    pivot: {x: 0.5, y: -0.037037037}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 187
+      width: 26
+      height: 27
+    spriteID: e542152cb689b7a478d1ca006bdd734f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 187}
+  - name: Car_Frame_32
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 118
+      width: 14
+      height: 32
+    spriteID: 7583ad26e56ab3247b53025f40e05c1c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 128, y: 118}
+  - name: Car_Frame_33
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 158
+      width: 14
+      height: 32
+    spriteID: 88865e7367f28d948bc583106a0959b0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 128, y: 158}
+  - name: Car_Frame_34
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 128
+      y: 198
+      width: 14
+      height: 32
+    spriteID: a512be63a5409bc46ba6c0d789f889c3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 128, y: 198}
+  - name: Car_Frame_35
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 152
+      y: 4
+      width: 14
+      height: 32
+    spriteID: bb762f5cda56729419a0aa5381c1d7f0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 152, y: 4}
+  - name: Car_Frame_36
+    originalName: 
+    pivot: {x: 0.4666667, y: -0.15384616}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 174
+      y: 128
+      width: 15
+      height: 26
+    spriteID: 52006b5fc4caaa74c921a647a87dda5d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 174, y: 128}
+  - name: Car_Frame_37
+    originalName: 
+    pivot: {x: 0.4615385, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 174
+      y: 162
+      width: 13
+      height: 30
+    spriteID: f2f5ed2f2cfa2234ba7620c914311e52
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 174, y: 162}
+  - name: Car_Frame_38
+    originalName: 
+    pivot: {x: 0.45454547, y: -0.071428575}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 38
+      y: 151
+      width: 22
+      height: 28
+    spriteID: e5317ded13df6f044bfc30098b622f35
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 38, y: 151}
+  - name: Car_Frame_39
+    originalName: 
+    pivot: {x: 0.47826087, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 38
+      y: 41
+      width: 23
+      height: 30
+    spriteID: 1f2225489786ba14ebd71b6e3cc40c2b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 38, y: 41}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1446203144
+    name: Car
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: Car_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 4
+        y: 2
+        width: 24
+        height: 28
+      spriteId: 5a9de5d8e3a135742b8b070e7fa05a30
+    - name: Car_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 4
+        y: 2
+        width: 24
+        height: 28
+      spriteId: 59039f7f01d5be149bc982e93c376c03
+    - name: Car_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 4
+        y: 1
+        width: 24
+        height: 29
+      spriteId: 576e01ba6114a66429b74fc910cdc0eb
+    - name: Car_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 4
+        y: 1
+        width: 24
+        height: 29
+      spriteId: 6534b447e8e19c74b8211a1ed19dc9a0
+    - name: Car_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 8
+        y: 1
+        width: 16
+        height: 30
+      spriteId: a016780b06e6fce449136481cffa5b82
+    - name: Car_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 8
+        y: 1
+        width: 16
+        height: 30
+      spriteId: c343094b09f6bc74da44b76a806168a7
+    - name: Car_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 8
+        y: 1
+        width: 16
+        height: 30
+      spriteId: 649a00b08f122f841aca943a4c2874a7
+    - name: Car_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 8
+        y: 1
+        width: 16
+        height: 30
+      spriteId: d13a7bc07da82614db7bd433fe7d2e98
+    - name: Car_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 5
+        y: 3
+        width: 22
+        height: 25
+      spriteId: 36dc70fd95f83cf49b508d50b49672d9
+    - name: Car_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 5
+        y: 3
+        width: 22
+        height: 25
+      spriteId: 57f7dd1415eb5c244a3b75384dc3195b
+    - name: Car_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 5
+        y: 3
+        width: 22
+        height: 25
+      spriteId: b62989ef89d37e145845b2f3e30c504a
+    - name: Car_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 5
+        y: 3
+        width: 22
+        height: 25
+      spriteId: b314f05f2695e4c4f88d469a8418d1ca
+    - name: Car_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 7
+        y: 4
+        width: 18
+        height: 23
+      spriteId: 22a2723ef722d714599ac5223d8bafa6
+    - name: Car_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 7
+        y: 4
+        width: 18
+        height: 23
+      spriteId: e18f2c7354ee7aa4ab256e8ef44d25f2
+    - name: Car_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 7
+        y: 4
+        width: 18
+        height: 23
+      spriteId: d58267c1a9e997d45b0ef406474112a8
+    - name: Car_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 7
+        y: 4
+        width: 18
+        height: 23
+      spriteId: b640bc9d6e7b8da4aba4d5bd1a716779
+    - name: Car_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 3
+        y: 1
+        width: 26
+        height: 29
+      spriteId: 8ad466a7688e2884b93a00219cedbd7f
+    - name: Car_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 3
+        y: 1
+        width: 26
+        height: 29
+      spriteId: 69f94edddd1838f47a469e4c4e5729e8
+    - name: Car_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 3
+        y: 1
+        width: 26
+        height: 29
+      spriteId: caf989bb9c2576e4aacb65602f1d8765
+    - name: Car_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 3
+        y: 1
+        width: 26
+        height: 29
+      spriteId: d21ba007f6660a544bac70dbe6bbba29
+    - name: Car_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 31
+      spriteId: 4e98c3fb238b0dc46b8db510abc40b3d
+    - name: Car_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 31
+      spriteId: b073757ce1e99074e8e757f77831f568
+    - name: Car_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 31
+      spriteId: 4c7c7633c88d53749a1ef1e7e53baf3b
+    - name: Car_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 8
+        y: 0
+        width: 16
+        height: 31
+      spriteId: ea67bd21aaadba947b2e78adca19537a
+    - name: Car_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 8
+        y: 1
+        width: 16
+        height: 30
+      spriteId: 16a9e6f2722e1b84d9bc51d9fd34142c
+    - name: Car_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 8
+        y: 1
+        width: 16
+        height: 30
+      spriteId: f43b38b9bb2903646a617a6f6fab2308
+    - name: Car_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 8
+        y: 1
+        width: 16
+        height: 30
+      spriteId: 2b1d515e68eb56842b2b6d80dcbbe1ba
+    - name: Car_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 8
+        y: 1
+        width: 16
+        height: 30
+      spriteId: da408ad965c4a1347bad52f5718044f0
+    - name: Car_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 3
+        y: 3
+        width: 26
+        height: 25
+      spriteId: e6caeb2ddedacf74ca637273e3f18391
+    - name: Car_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 3
+        y: 3
+        width: 26
+        height: 25
+      spriteId: 0cb71d1c0e2676746b476b4691822c7f
+    - name: Car_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 3
+        y: 1
+        width: 26
+        height: 27
+      spriteId: f5d8e61c7b3555641a8bdbfcd5aeaff8
+    - name: Car_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 3
+        y: 1
+        width: 26
+        height: 27
+      spriteId: e542152cb689b7a478d1ca006bdd734f
+    - name: Car_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 9
+        y: 0
+        width: 14
+        height: 32
+      spriteId: 7583ad26e56ab3247b53025f40e05c1c
+    - name: Car_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 9
+        y: 0
+        width: 14
+        height: 32
+      spriteId: 88865e7367f28d948bc583106a0959b0
+    - name: Car_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 9
+        y: 0
+        width: 14
+        height: 32
+      spriteId: a512be63a5409bc46ba6c0d789f889c3
+    - name: Car_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 9
+        y: 0
+        width: 14
+        height: 32
+      spriteId: bb762f5cda56729419a0aa5381c1d7f0
+    - name: Car_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 9
+        y: 4
+        width: 15
+        height: 26
+      spriteId: 52006b5fc4caaa74c921a647a87dda5d
+    - name: Car_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 10
+        y: 0
+        width: 13
+        height: 30
+      spriteId: f2f5ed2f2cfa2234ba7620c914311e52
+    - name: Car_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 6
+        y: 2
+        width: 22
+        height: 28
+      spriteId: e5317ded13df6f044bfc30098b622f35
+    - name: Car_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 5
+        y: 0
+        width: 23
+        height: 30
+      spriteId: 1f2225489786ba14ebd71b6e3cc40c2b
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 32, y: 32}
