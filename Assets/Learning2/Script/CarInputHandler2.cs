@@ -21,7 +21,12 @@ namespace Gamandol.Race
         Vector2 nextPointDirection, nextPointDirection2;
         int directionPoint = -1;
         int actionCount = 0; // 행동 카운트
-
+        int wallCount = 0;
+        float turnAmount = 0;
+        public bool Sensorcheck1 = true;
+        public bool Sensorcheck2 = true;
+        public bool Sensorspeed = true;
+        public bool Sensorrot = true;
         void Awake()
         {
             topDownCarController = GetComponent<TopDownCarController2>();
@@ -41,12 +46,13 @@ namespace Gamandol.Race
             topDownCarController.CarSpurt(); // 자동차 스퍼트
             topDownCarController.CarReset(); // 벡터힘, 회전각 초기화
             nextCheckPoint = 0; // 체크포인트 초기화
+            wallCount = 0; // 벽에 부딛힌횟수 초기화
         }
 
         
         public override void OnActionReceived(ActionBuffers actions)
         {
-            AddReward(-0.002f);
+            AddReward(-0.004f);
             actionCount++;
 
             if (actionCount == 50)
@@ -71,7 +77,7 @@ namespace Gamandol.Race
                         }*/
 
             float forwardAmount = 0f;
-            float turnAmount = 0f;
+            turnAmount = 0f;
 
             switch (actions.DiscreteActions[0])
             {
@@ -123,7 +129,7 @@ namespace Gamandol.Race
             */
             if(directionPoint != nextCheckPoint)
             {
-                nextPointDirection = checkPointList[nextCheckPoint].transform.up;
+                nextPointDirection = checkPointList[nextCheckPoint].transform.up; // 다음 체크포인트의 윗부분위치를 nextPointDirection에 대입
                 int doubleNextCeechPoint = nextCheckPoint + 1 >= checkPointList.Count ? 0 : nextCheckPoint + 1;
                 nextPointDirection2 = checkPointList[doubleNextCeechPoint].transform.up;
 
@@ -131,16 +137,21 @@ namespace Gamandol.Race
             }
 
             //Debug.Log("a: " + Vector2.Dot(transform.up, nextPointDirection));
-            sensor.AddObservation(Vector2.Dot(transform.up, nextPointDirection));
-            sensor.AddObservation(Vector2.Dot(transform.up, nextPointDirection2));
-            sensor.AddObservation(carRigidbody2D.velocity.magnitude);
+            if(Sensorcheck1)
+            sensor.AddObservation(Vector2.Dot(transform.up, nextPointDirection)); // 다음체크포인트와 거리내적
+            if(Sensorcheck2)
+            sensor.AddObservation(Vector2.Dot(transform.up, nextPointDirection2)); // 다다음 체크포인트와 거리내적
+            if(Sensorspeed)
+            sensor.AddObservation(carRigidbody2D.velocity.magnitude); // 에이전트의 현재속력
+            if(Sensorrot)
+            sensor.AddObservation(turnAmount);
         }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.tag == "CheckPoint") 
             {
-                if (TrackCheckpoints2.instance.GetCheckPointIndex(collision.transform) == nextCheckPoint)
+                if (TrackCheckpoints2.instance.GetCheckPointIndex(collision.transform) == nextCheckPoint) // 올바른 체크포인트 충돌시
                 {
                     AddReward(1f);
                     AddReward(carRigidbody2D.velocity.magnitude * 0.1f);
@@ -154,15 +165,15 @@ namespace Gamandol.Race
                         EndEpisode();
                     }
                 }
-                else
+                else // 다른 체크포인트 충돌시
                 {
-                    if (Vector2.Dot(transform.up, nextPointDirection) < 0)
+                    if (Vector2.Dot(transform.up, nextPointDirection) < 0) // 에이전트가 반대 방향으로 충돌
                     {
                         Debug.Log("back");
                         AddReward(-10f);
                         EndEpisode();
                     }
-                    else
+                    else // 에이전트가 후진해서 충돌
                     {
                         Debug.Log("-1");
                         AddReward(-1f);
@@ -176,24 +187,33 @@ namespace Gamandol.Race
         {
             if (collision.collider.tag == "Wall")
             {
-                AddReward(-0.5f);
+                
+                AddReward(-2f); // 벽에 충돌시 보상점수 감소
+                wallCount++;
+                // if (wallCount > 2)
+                //     EndEpisode();
+                /*                contacts = new ContactPoint2D[collision.contactCount];
+                                collision.GetContacts(contacts);
+                                totalImpulse = 0;
+                                foreach (ContactPoint2D contact in contacts)
+                                {
+                                    totalImpulse += contact.normalImpulse;
+                                }
 
-/*                contacts = new ContactPoint2D[collision.contactCount];
-                collision.GetContacts(contacts);
-                totalImpulse = 0;
-                foreach (ContactPoint2D contact in contacts)
-                {
-                    totalImpulse += contact.normalImpulse;
-                }
-
-                if (totalImpulse > 6)
-                {
-                    AddReward(-totalImpulse * 2);
-                    Debug.Log("fast2");
-                    EndEpisode();
-                }*/
+                                if (totalImpulse > 6)
+                                {
+                                    AddReward(-totalImpulse * 2);
+                                    Debug.Log("fast2");
+                                    EndEpisode();
+                                }*/
             }
+            /*if (collision.collider.tag == "Player")
+            {
+                Debug.Log("충돌");
+                AddReward(7f);
+            }*/
         }
+
 /*
         private void OnCollisionStay2D(Collision2D collision)
         {

@@ -20,6 +20,7 @@ namespace Gamandol.Race
 
         // 지역변수
         float maxSpeedValue = 0; // 최고속력값 저장변수
+        float accelerationFactorValue = 0;
         float accelerationInput = 0; // 앞으로가는 힘의값
         float steeringInput = 0; // 좌우방향값
 
@@ -41,9 +42,40 @@ namespace Gamandol.Race
 
         private void Start()
         {
+            if (CarType == 7)
+            {
+                maxSpeed += 3;
+                accelerationFactor += 1.5f;
+            }
+            if (CarType == 8)
+            {
+                maxSpeed -= 3;
+                accelerationFactor -= 1.5f;
+            }
             carRigidbody2D.mass = Mass; // 무게대입
             maxSpeedValue = maxSpeed; // 최고속력값 저장
+            accelerationFactorValue = accelerationFactor;
             animator.SetInteger("Cartype", CarType); // 자동차 애니메이션 설정
+            
+        }
+        private void Update()
+        {
+            if (CarType == 7 && maxSpeed > 3)
+            {
+                maxSpeed -= Time.deltaTime * 0.45f;
+            }
+            if (CarType == 7 && accelerationFactor > 0.75f)
+            {
+                accelerationFactor -= Time.deltaTime * 0.15f;
+            }
+            if(CarType == 8 && maxSpeed < 40)
+            {
+                maxSpeed += Time.deltaTime * 0.6f;
+            }
+            if (CarType == 8 && accelerationFactor < 20)
+            {
+                accelerationFactor += Time.deltaTime * 0.3f;
+            }
         }
 
         private void FixedUpdate()
@@ -69,6 +101,8 @@ namespace Gamandol.Race
                 case 4: animator.SetBool("DuckBoost", true); break;
                 case 5: animator.SetBool("FoxBoost", true); break;
                 case 6: animator.SetBool("RabbitBoost", true); break;
+                case 7: animator.SetBool("DogBoost", true); break;
+                case 8: animator.SetBool("DogBoost", true); break;
             }
         }
 
@@ -79,6 +113,15 @@ namespace Gamandol.Race
 
             carRigidbody2D.SetRotation(rotationAngle);
             carRigidbody2D.velocity = Vector3.zero;
+
+            maxSpeed = maxSpeedValue;
+            accelerationFactor = accelerationFactorValue;
+
+            if (CarType == 7)
+            {
+                maxSpeed += 4;
+                accelerationFactor += 2;
+            }
         }
 
         void ReturnNormalSpeed()
@@ -94,6 +137,8 @@ namespace Gamandol.Race
                 case 4: animator.SetBool("DuckBoost", false); break;
                 case 5: animator.SetBool("FoxBoost", false); break;
                 case 6: animator.SetBool("RabbitBoost", false); break;
+                case 7: animator.SetBool("DogBoost", false); break;
+                case 8: animator.SetBool("DogBoost", false); break;
             }
         }
 
