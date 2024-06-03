@@ -29,13 +29,6 @@ namespace Gamandol.Race
             particleEmissionRate = Mathf.Lerp(particleEmissionRate, 0, Time.deltaTime * 5);
             particleSystemEmissionModule.rateOverTime = particleEmissionRate;
 
-            if(topDownCarController.IsTireScreeching(out float lateralVelocity, out bool isBraking))
-            {
-                if (isBraking)
-                    particleEmissionRate = 30; // 차가 정지해있으면 파티클 지속시간 30
-
-                else particleEmissionRate = Mathf.Abs(lateralVelocity) * 2; // 움직일땐 차의 커브값에2배만큼 파티클 지속시간 대입
-            }
         }
     }
 }

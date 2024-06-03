@@ -20,10 +20,7 @@ namespace Gamandol.Race
 
          void Update()
         {
-            //
-            if (topDownCarController.IsTireScreeching(out float lateralVelocity, out bool isBraking))
-                trailRenderer.emitting = true;
-            else trailRenderer.emitting = false;
+           
         }
     }
 }
