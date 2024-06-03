@@ -192,20 +192,21 @@ namespace Gamandol.Race
                 wallCount++;
                 // if (wallCount > 2)
                 //     EndEpisode();
-                /*                contacts = new ContactPoint2D[collision.contactCount];
-                                collision.GetContacts(contacts);
-                                totalImpulse = 0;
-                                foreach (ContactPoint2D contact in contacts)
-                                {
-                                    totalImpulse += contact.normalImpulse;
-                                }
 
-                                if (totalImpulse > 6)
-                                {
-                                    AddReward(-totalImpulse * 2);
-                                    Debug.Log("fast2");
-                                    EndEpisode();
-                                }*/
+/*                contacts = new ContactPoint2D[collision.contactCount];
+                collision.GetContacts(contacts);
+                totalImpulse = 0;
+                foreach (ContactPoint2D contact in contacts)
+                {
+                    totalImpulse += contact.normalImpulse;
+                }
+
+                if (totalImpulse > 6)
+                {
+                    AddReward(-totalImpulse * 2);
+                    Debug.Log("fast2");
+                    //EndEpisode();
+                }*/
             }
             /*if (collision.collider.tag == "Player")
             {

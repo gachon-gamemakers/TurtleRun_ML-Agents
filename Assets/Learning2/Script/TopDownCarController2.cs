@@ -92,7 +92,7 @@ namespace Gamandol.Race
             maxSpeed = 99999; // 최고속도 제한해제
             accelerationFactor += spurt; // 초반 가속힘 스퍼트만큼 추가
             Invoke("ReturnNormalSpeed", 1.5f); // 0.5초후 원래속도로 초기화 
-            switch (CarType)
+/*            switch (CarType)
             {
                 case 0: animator.SetBool("TurtleBoost", true); break;
                 case 1: animator.SetBool("CactusBoost", true); break;
@@ -103,7 +103,7 @@ namespace Gamandol.Race
                 case 6: animator.SetBool("RabbitBoost", true); break;
                 case 7: animator.SetBool("DogBoost", true); break;
                 case 8: animator.SetBool("DogBoost", true); break;
-            }
+            }*/
         }
 
         [Button]
@@ -128,7 +128,7 @@ namespace Gamandol.Race
         {
             maxSpeed = maxSpeedValue;
             accelerationFactor -= spurt;
-            switch (CarType)
+/*            switch (CarType)
             {
                 case 0: animator.SetBool("TurtleBoost", false); break;
                 case 1: animator.SetBool("CactusBoost", false); break;
@@ -139,7 +139,7 @@ namespace Gamandol.Race
                 case 6: animator.SetBool("RabbitBoost", false); break;
                 case 7: animator.SetBool("DogBoost", false); break;
                 case 8: animator.SetBool("DogBoost", false); break;
-            }
+            }*/
         }
 
         void ApplyEngineForce()
