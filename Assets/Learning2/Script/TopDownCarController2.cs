@@ -16,11 +16,9 @@ namespace Gamandol.Race
         public float maxSpeed = 20; // 최고속력
         public float spurt = 50; // 초반속력
         public float Mass = 1; // 차의 무게
-        public int CarType = 0;
 
         // 지역변수
         float maxSpeedValue = 0; // 최고속력값 저장변수
-        float accelerationFactorValue = 0;
         float accelerationInput = 0; // 앞으로가는 힘의값
         float steeringInput = 0; // 좌우방향값
 
@@ -31,51 +29,18 @@ namespace Gamandol.Race
         // 컴포넌트
         Rigidbody2D carRigidbody2D;
 
-        //애니메이터
-        private Animator animator;
-
         private void Awake()
         {
             carRigidbody2D = GetComponent<Rigidbody2D>();
-            animator = GetComponent<Animator>();
         }
 
         private void Start()
         {
-            if (CarType == 7)
-            {
-                maxSpeed += 3;
-                accelerationFactor += 1.5f;
-            }
-            if (CarType == 8)
-            {
-                maxSpeed -= 3;
-                accelerationFactor -= 1.5f;
-            }
             carRigidbody2D.mass = Mass; // 무게대입
             maxSpeedValue = maxSpeed; // 최고속력값 저장
-            accelerationFactorValue = accelerationFactor;
-            animator.SetInteger("Cartype", CarType); // 자동차 애니메이션 설정
-            
-        }
-        private void Update()
-        {
-            if (CarType == 7 && maxSpeed > 3)
-            {
-                maxSpeed -= Time.deltaTime * 0.45f;
-            }
-            if (CarType == 7 && accelerationFactor > 0.75f)
-            {
-                accelerationFactor -= Time.deltaTime * 0.15f;
-            }
-            if(CarType == 8 && maxSpeed < 40)
-            {
-                maxSpeed += Time.deltaTime * 0.6f;
-            }
-            if (CarType == 8 && accelerationFactor < 20)
-            {
-                accelerationFactor += Time.deltaTime * 0.3f;
-            }
+            maxSpeed = 99999; // 최고속도 제한해제
+            accelerationFactor += spurt; // 초반 가속힘 스퍼트만큼 추가
+            Invoke("ReturnNormalSpeed", 0.5f); // 0.5초후 원래속도로 초기화 
         }
 
         private void FixedUpdate()
@@ -87,25 +52,6 @@ namespace Gamandol.Race
             ApplySteering();
         }
 
-        public void CarSpurt()
-        {
-            maxSpeed = 99999; // 최고속도 제한해제
-            accelerationFactor += spurt; // 초반 가속힘 스퍼트만큼 추가
-            Invoke("ReturnNormalSpeed", 1.5f); // 0.5초후 원래속도로 초기화 
-            switch (CarType)
-            {
-                case 0: animator.SetBool("TurtleBoost", true); break;
-                case 1: animator.SetBool("CactusBoost", true); break;
-                case 2: animator.SetBool("ChickenBoost", true); break;
-                case 3: animator.SetBool("DogBoost", true); break;
-                case 4: animator.SetBool("DuckBoost", true); break;
-                case 5: animator.SetBool("FoxBoost", true); break;
-                case 6: animator.SetBool("RabbitBoost", true); break;
-                case 7: animator.SetBool("DogBoost", true); break;
-                case 8: animator.SetBool("DogBoost", true); break;
-            }
-        }
-
         [Button]
         public void CarReset()
         {
@@ -113,33 +59,12 @@ namespace Gamandol.Race
 
             carRigidbody2D.SetRotation(rotationAngle);
             carRigidbody2D.velocity = Vector3.zero;
-
-            maxSpeed = maxSpeedValue;
-            accelerationFactor = accelerationFactorValue;
-
-            if (CarType == 7)
-            {
-                maxSpeed += 4;
-                accelerationFactor += 2;
-            }
         }
 
         void ReturnNormalSpeed()
         {
             maxSpeed = maxSpeedValue;
             accelerationFactor -= spurt;
-            switch (CarType)
-            {
-                case 0: animator.SetBool("TurtleBoost", false); break;
-                case 1: animator.SetBool("CactusBoost", false); break;
-                case 2: animator.SetBool("ChickenBoost", false); break;
-                case 3: animator.SetBool("DogBoost", false); break;
-                case 4: animator.SetBool("DuckBoost", false); break;
-                case 5: animator.SetBool("FoxBoost", false); break;
-                case 6: animator.SetBool("RabbitBoost", false); break;
-                case 7: animator.SetBool("DogBoost", false); break;
-                case 8: animator.SetBool("DogBoost", false); break;
-            }
         }
 
         void ApplyEngineForce()
@@ -211,7 +136,7 @@ namespace Gamandol.Race
             }
 
             //커브를 크게 돌면 자국이 남음
-            if (Mathf.Abs(GetLateralVelocity()) > 1.0f)
+            if (Mathf.Abs(GetLateralVelocity()) > 2.5f)
                 return true;
 
             return false;
